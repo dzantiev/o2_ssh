@@ -22,7 +22,7 @@ source /path/to/folder/.zshrc
 
 ```
 o2_ssh
-Do you want to use the file? (y/n):
+Do you want to use file? (y/n):
 ```
 
 Тут следует выбор: "хотите ли вы использовать файл?"(поддерживается sftp-config.json).
@@ -30,8 +30,8 @@ Do you want to use the file? (y/n):
 ### 1. Соединение из файла:
 
 ```
-Do you want to use the file? (y/n): y
-Where is the file located:
+Do you want to use file? (y/n): y
+Where is the file:
 ```
 
 Укажите директорию в которой лежит файл:
@@ -43,13 +43,13 @@ Where is the file located:
 ### 2. Ручное соединение:
 
 ```
-Do you want to use the file? (y/n): n
+Do you want to use file? (y/n): n
 ```
 
 Здесь следует ввести параметры соединения:
 
 ```
-Set user name:
+Set username:
 ```
 
 Имя пользователя на удаленной машине.

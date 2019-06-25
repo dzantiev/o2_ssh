@@ -1,8 +1,8 @@
 #!/bin/bash
 _o2_ssh_new()
 {
-	if _o2_ssh_ask "Do you want to use the file?"; then
-		echo "Where is the file located: "
+	if _o2_ssh_ask "Do you want to use file?"; then
+		echo "Where is the file: "
 
 		sftpFilePath=`pwd`
 		pathExist=false
@@ -16,12 +16,12 @@ _o2_ssh_new()
 			fi
 
 			if [ ! -d "$sftpFilePath" ]; then
-				echo "folder '$sftpFilePath' not found"
+				echo "'$sftpFilePath' folder not found"
 				continue
 			fi
 
 			if [ ! -f "$sftpFilePath/sftp-config.json" ]; then
-				echo "In the folder '$sftpFilePath' there is no file 'sftp-config.json' $sftpFilePath/sftp-config.json"
+				echo "There is no sftp-config.json file in the '$sftpFilePath' folder"
 				continue
 			fi
 
@@ -33,7 +33,7 @@ _o2_ssh_new()
 		_o2_ssh_connectFile $sftpFilePath
 		return 0;
 	else
-		echo -n "Set user name: "
+		echo -n "Set username: "
 		read userName </dev/tty
 		echo -n "Set host: "
 		read host </dev/tty
